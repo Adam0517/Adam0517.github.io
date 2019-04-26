@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Student Bio Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <h1> FH Bio Page</h1>
-    <img src = "IMAGE/0.jpg", alt ="My Picture", width="32",height="32">
-
-    <br>
-
-    <p> Hi, my name is FH who is from Taiwan. </p><br>
-    <p> I studied Data Science bootcamp in Rutgers!!! </p>
-
-    <ul>
-        <li> <a href="http://www.runoob.com/"> 访问菜鸟教程  </a> </li>
-        <li> <a href="http://www.runoob.com/"> 访问菜鸟教程2 </a> </li>
-    </ul>
-
-    <table border="1">
-
-        <thead>
-            <tr>
-                <th colspan="3">My favorite things</th>
-            </tr> 
-        </thead>
-        <tbody>
-            <tr>
-                <th>Movies</th>
-                <th>Books</th>
-                <th>Songs</th>
-            </tr>
-            <tr>
-                <td>Harry Poter</td>
-                <td>Harry Poter</td>
-                <td>LOVE</td>
-            </tr>
-        </tbody>
-        
-    </table>
-    
-
+    <div class="container">
+    <!-- Navigation Button -->
+        <div class="row">
+            <div class="col-md-12">
+               <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                        <a class="navbar-brand" href="index.html">Latitude</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                                Plots
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Max Temperature</a>
+                                <a class="dropdown-item" href="#">Humidity</a>
+                                <a class="dropdown-item" href="#">Cloudiness</a>
+                                <a class="dropdown-item" href="wind.html">Wind Speed</a>
+                              </div>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Comparison</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Data</a>
+                            </li>
+                          </ul>
+                        </div>
+               </nav>
+            </div>
+        </div>
+    <!-- Navigation Button -->
+    <!-- Content of Main Page-->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="box">
+                    <h2>Introduction : Latitude vs. Weather factors</h2>
+                    <hr>
+                    <div class="Pic_word">
+                        <img src="Resources/world.png" alt="World Picture" 
+                        style="width:256px;height:256px;"><br>
+                        <p class="outside_pic">The picture is from this <a target="_blank" href="https://superdupergames.co/us-atlas-map-with-latitude-and-longitude/us-atlas-map-with-latitude-and-longitude-refrence-world-map-with-latitude-longitude-list-longitude-and-latitude-map/"
+                        title="Picture Website">website</a></p>
+                    </div>
+                    <p>The purpose of this topice is visualizing the weather of 500+ cites acroos the world of varying
+                   distance from the equator. We first used OpenWeatherMap API to get weather datasets over 500
+                       cities.</p> <br>
+                    <p>Then, we used Python Matplotlib to plot various aspects of latitude vs. weather factors
+                   (temperature, cloudiness, wind speed, and humidity). This site provides the source data and 
+                   visualizations created as part of the analysis, as well as explanations and descriptions of 
+                       any trends and correlations witnessed.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <h2>Visualizations</h2>
+                    <hr>
+                    <a href="#"><img src="Resources/figure1.png" 
+                       alt="Lattitude vs. Max Temp." style="width:150px;height:150px;"></a>
+                    <a href="#"><img src="Resources/figure3.png" 
+                       alt="Lattitude vs. cloud." style="width:150px;height:150px;"></a>
+                    <a href="#"><img src="Resources/figure4.png" 
+                       alt="Lattitude vs. wind." style="width:150px;height:150px;"></a>
+                    <a href="#"><img src="Resources/figure2.png" 
+                       alt="Lattitude vs. humidity." style="width:150px;height:150px;"></a>
+                </div>
+            </div>
+        </div>
+    <!-- Content of Main Page-->
+    </div>
 
 
 </body>
+
 </html>
